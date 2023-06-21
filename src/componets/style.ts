@@ -19,7 +19,7 @@ export const BuyUser = styled.div`
     align-items: center;
     padding: 0.5rem;
     border-radius: 8px;
-    height: 2rem;
+    height: 3rem;
   }
   .buyCar{
     height: 3rem;
