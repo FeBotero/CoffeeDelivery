@@ -6,6 +6,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+
+    -webkit-font-smooothing:antialiased;
+}
 body,input,textarea,button{
     font-family: 'Roboto',sans-serif;
     font-weight: 400;
