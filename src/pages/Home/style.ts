@@ -57,4 +57,14 @@ export const ProductContainer=styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem 6rem;
+
+
+
+  .products{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 3rem;
+  }
 `

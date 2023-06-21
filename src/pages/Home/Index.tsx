@@ -4,6 +4,7 @@ import IconBox from "../../assets/IconBox.svg"
 import IconCar from "../../assets/IconCar.svg"
 import IconCoffee from "../../assets/IconCoffee.svg"
 import IconTime from "../../assets/IconTime.svg"
+import { CardCooffee } from "../../componets/Card/CardCoffee";
 
 
 
@@ -35,7 +36,12 @@ export function Home() {
           <h3>Nossos Cafés</h3>
         </div>
         <div className="products">
-
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            
         </div>
       </ProductContainer>
     </HomeContainer>
