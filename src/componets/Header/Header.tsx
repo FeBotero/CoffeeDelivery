@@ -1,6 +1,6 @@
-import logo from "../assets/Logo.svg"
-import ping from "../assets/Vector.svg"
-import car from "../assets/Empty.svg"
+import logo from "../../assets/Logo.svg"
+import ping from "../../assets/Vector.svg"
+import car from "../../assets/Empty.svg"
 import { BuyUser, HeaderContainer } from "./style"
 
 
