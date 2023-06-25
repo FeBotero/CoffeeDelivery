@@ -41,6 +41,15 @@ export function Home() {
             <CardCooffee/>
             <CardCooffee/>
             <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
+            <CardCooffee/>
             
         </div>
       </ProductContainer>
