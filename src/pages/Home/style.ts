@@ -57,6 +57,7 @@ export const ProductContainer=styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem 6rem;
+  align-items:center;
 
 
 

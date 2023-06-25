@@ -18,18 +18,20 @@ margin-top: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
     img{
       margin-top: -6rem;
       width: 10rem;
     }
   
 
-  p{
-    
+  span{
+    font-weight: 500;
     background: ${props => props.theme["yellow-light"]};
     border-radius: 16px;
+    width: 7rem;
     font-size: 1rem;
-    padding: 0.2rem;
+    padding: 0.2rem 0;
     color:${props => props.theme["yellow-dark"]}
   }
   }

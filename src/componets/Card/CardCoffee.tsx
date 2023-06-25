@@ -9,7 +9,7 @@ export function CardCooffee() {
           <img src={exTrad} alt="Café Tradicional" />
         
         
-            <p>Tradicional</p>
+            <span>Tradicional</span>
         
       </div>
       <div className="coffee">
