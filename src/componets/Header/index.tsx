@@ -12,7 +12,7 @@ export function Header(){
       </div>
       <BuyUser>
         <div className="local"><img src={ping} alt="Localization" /> Manaus, AM</div>
-        <div><img className="buyCar" src={car} alt="" /></div>
+        <div><a href="/car"><img className="buyCar" src={car} alt="" /></a></div>
       </BuyUser>
     </HeaderContainer>
   )
