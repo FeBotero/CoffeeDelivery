@@ -5,7 +5,7 @@ import IconCar from "../../assets/IconCar.svg"
 import IconCoffee from "../../assets/IconCoffee.svg"
 import IconTime from "../../assets/IconTime.svg"
 import { CardCooffee } from "../../componets/Card/CardCoffee";
-
+import { Cafes } from "../../utils/utils";
 
 
 
@@ -14,7 +14,7 @@ export function Home() {
   return (
     <HomeContainer>
       <HomeContent>
-        
+
         <div className="content">
           <div className="promCoffee">
             <h1>Encontre o café perfeito para qualquer hora do dia</h1>
@@ -36,21 +36,15 @@ export function Home() {
           <h3>Nossos Cafés</h3>
         </div>
         <div className="products">
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            <CardCooffee/>
-            
+
+          {
+            Cafes.map(cafe => (
+              <CardCooffee img={cafe.img} nome={cafe.nome} description={cafe.descricao} price={cafe.valor} tipos={cafe.tipos}/>
+            ))
+          }
+
+
+
         </div>
       </ProductContainer>
     </HomeContainer>
