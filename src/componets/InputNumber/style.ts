@@ -12,6 +12,7 @@ export const InputContainer = styled.div`
   width: 7rem;
   font-weight: bold;
   font-size: large;
+  padding: 0.5rem;
   
   div{
     display: flex;
@@ -24,8 +25,10 @@ export const InputContainer = styled.div`
     height: 1rem;
   }
   .sets{
+    
     color: ${props=>props.theme["purple"]};
     cursor: pointer;
+    
    
   }
   .count{

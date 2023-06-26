@@ -1,10 +1,11 @@
-import { Address, AddressPayment, ConfirmationContainer, Payment, Product, SelectionProducts } from "./style";
+import { Address, AddressPayment, ConfirmationContainer, OrderDetailsContainer, Payment, Product, SectionCoffeeContainer, } from "./style";
 import ExTrad from "../../assets/cafes/exTrad.svg"
 import { InputNumber } from "../../componets/InputNumber";
+import { Trash } from "@phosphor-icons/react";
 
 export function ConfirmationSell() {
-  
-   
+
+
 
 
 
@@ -42,41 +43,47 @@ export function ConfirmationSell() {
       </AddressPayment>
       <div>
         <h3>Cafés selecionados</h3>
-        <SelectionProducts>
-          <div >
-            <Product >
-              <div>
-                <img src={ExTrad} alt="" />
-              </div>
-              <div>
-                <div><p>Expresso Tradicional</p></div>
+        <SectionCoffeeContainer>
+          <div>
+            <div >
+              <Product >
                 <div>
-                  <InputNumber/>
-
-                  <button>Remover</button>
+                  <img src={ExTrad} alt="" />
                 </div>
-              </div>
-              <div>
-                R$ 9,90
-              </div>
-            </Product>
-            <div>
-              <div>
-                <img src={ExTrad} alt="" />
-              </div>
-              <div>
-                <div><p>Expresso Tradicional</p></div>
-                <div>
-                  <input type="number" />
-                  <button>Remover</button>
+                <div className="products">
+                  <div>
+                    <p>Expresso Tradicional</p></div>
+                  <div className="buttons">
+                    <InputNumber />
+                    <button className="button"> <Trash size={24} color="#8047F8" />REMOVER</button>
+                  </div>
                 </div>
-              </div>
-              <div>R$ 9,90</div>
+                <div >
+                  <p className="price">R$ 9,90</p>
+                </div>
+              </Product>
+              <hr />  
             </div>
-
           </div>
-
-        </SelectionProducts>
+          <OrderDetailsContainer>
+            
+            <div>
+              <div>Total de itens</div>
+              <div>R$ 29,70</div>
+            </div>
+            <div>
+              <div>Entrega</div>
+              <div>R$ 3,50</div>
+            </div>
+            <div className="orderTotal">
+              <div>Total</div>
+              <div>R$ 33,20</div>
+            </div>
+            <div>
+              <button className="confirmButton">CONFIRMAR PEDIDO</button>
+            </div>
+          </OrderDetailsContainer>
+        </SectionCoffeeContainer>
       </div>
     </ConfirmationContainer>
 
