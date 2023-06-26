@@ -1,7 +1,11 @@
 import { Address, AddressPayment, ConfirmationContainer, Payment, Product, SelectionProducts } from "./style";
 import ExTrad from "../../assets/cafes/exTrad.svg"
+import { InputNumber } from "../../componets/InputNumber";
 
 export function ConfirmationSell() {
+  
+   
+
 
 
   return (
@@ -47,12 +51,8 @@ export function ConfirmationSell() {
               <div>
                 <div><p>Expresso Tradicional</p></div>
                 <div>
-                  <div className="inputNumber">
-                  
-                  <input type="number"min="0" name="quantity" value="1"  id="QTD" />
-       
-                  </div>
-                  
+                  <InputNumber/>
+
                   <button>Remover</button>
                 </div>
               </div>

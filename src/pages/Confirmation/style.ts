@@ -89,5 +89,6 @@ export const Product = styled.div`
   img{
     width: 3rem;
   }
+
   
 `
