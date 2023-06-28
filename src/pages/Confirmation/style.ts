@@ -81,6 +81,8 @@ gap:1rem;
 
 hr{
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  
   color: ${props=>props.theme["base-button"]};
 }
 `

@@ -2,12 +2,14 @@ import { Address, AddressPayment, ConfirmationContainer, OrderDetailsContainer, 
 import ExTrad from "../../assets/cafes/exTrad.svg"
 import { InputNumber } from "../../componets/InputNumber";
 import { Trash } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
 
 export function ConfirmationSell() {
+  const navigate = useNavigate()
 
-
-
-
+  function confirmOrder(){
+    navigate("/delivery")
+  }
 
   return (
     <ConfirmationContainer>
@@ -55,6 +57,26 @@ export function ConfirmationSell() {
                     <p>Expresso Tradicional</p></div>
                   <div className="buttons">
                     <InputNumber />
+                   
+                    <button className="button"> <Trash size={24} color="#8047F8" />REMOVER</button>
+                  </div>
+                </div>
+                <div >
+                  <p className="price">R$ 9,90</p>
+                </div>
+              </Product>
+              <hr />  
+            </div>
+            <div >
+              <Product >
+                <div>
+                  <img src={ExTrad} alt="" />
+                </div>
+                <div className="products">
+                  <div>
+                    <p>Expresso Tradicional</p></div>
+                  <div className="buttons">
+                    <InputNumber />
                     <button className="button"> <Trash size={24} color="#8047F8" />REMOVER</button>
                   </div>
                 </div>
@@ -80,7 +102,7 @@ export function ConfirmationSell() {
               <div>R$ 33,20</div>
             </div>
             <div>
-              <button className="confirmButton">CONFIRMAR PEDIDO</button>
+              <button onClick={confirmOrder} className="confirmButton">CONFIRMAR PEDIDO</button>
             </div>
           </OrderDetailsContainer>
         </SectionCoffeeContainer>
