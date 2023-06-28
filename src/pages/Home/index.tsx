@@ -10,6 +10,7 @@ import { Cafes } from "../../utils/utils";
 
 
 
+
 export function Home() {
   return (
     <HomeContainer>

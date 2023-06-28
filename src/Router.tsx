@@ -1,5 +1,5 @@
 import {Route, Routes } from "react-router-dom"
-import { Home } from "./pages/Home/Index"
+import { Home } from "./pages/Home/index"
 import { DefaultLayout } from "./layout/DefaultLayout"
 import { ConfirmationSell } from "./pages/Confirmation"
 import { Delivery } from "./pages/Delivery"

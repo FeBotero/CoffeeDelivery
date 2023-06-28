@@ -1,5 +1,5 @@
 import { Address, AddressPayment, ConfirmationContainer, OrderDetailsContainer, Payment, Product, SectionCoffeeContainer, } from "./style";
-import ExTrad from "../../assets/cafes/exTrad.svg"
+import ExTrad from "../../../public/exTrad.svg"
 import { InputNumber } from "../../componets/InputNumber";
 import { Bank, CreditCard, CurrencyDollar,Money, Trash } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";
