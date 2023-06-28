@@ -1,11 +1,16 @@
 import { Address, AddressPayment, ConfirmationContainer, OrderDetailsContainer, Payment, Product, SectionCoffeeContainer, } from "./style";
 import ExTrad from "../../assets/cafes/exTrad.svg"
 import { InputNumber } from "../../componets/InputNumber";
-import { Trash } from "@phosphor-icons/react";
+import { Bank, CreditCard, CurrencyDollar,Money, Trash } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export function ConfirmationSell() {
   const navigate = useNavigate()
+  const [payChose,setPayChose] = useState("")
+
+
+  console.log(payChose)
 
   function confirmOrder(){
     navigate("/delivery")
@@ -33,12 +38,17 @@ export function ConfirmationSell() {
           </form>
         </Address>
         <Payment>
-          <h4>Pagamento</h4>
+          <h4><CurrencyDollar size={32} color="#9141ac" /> Pagamento</h4>
           <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
           <div className="paymentForm">
-            <button>CARTÃO DE CRÉDITO</button>
-            <button>CARTÃO DE DÉBITO</button>
-            <button>DINHEIRO</button>
+            <button className={payChose=="credit"?"chose":""} onClick={()=>setPayChose("credit")} value={payChose}>
+            <CreditCard size={32} color="#9141ac" /> CARTÃO DE CRÉDITO
+            </button>
+            <button className={payChose=="debit"?"chose":""} onClick={()=>setPayChose("debit")} value={payChose}> <Bank size={32} color="#9141ac" />CARTÃO DE DÉBITO
+            </button>
+            <button  className={payChose=="cash"?"chose":""} onClick={()=>setPayChose("cash")} value={payChose}>
+              <Money size={32} color="#9141ac" /> DINHEIRO
+              </button>
           </div>
 
         </Payment>

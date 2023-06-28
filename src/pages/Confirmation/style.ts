@@ -43,20 +43,40 @@ export const BaseForm = styled.div`
 `
 export const Payment = styled(BaseForm)`
   gap: 1rem;
+  h4{
+    display: flex;
+    align-items: center;
+    font-size:x-large;
+    font-weight: 400;
+  }
 .paymentForm{
   display: flex;
   justify-content: center;
   gap: 2rem;
 
   button{
-    border: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.3rem;
+    border: 2px solid transparent;
     width: 100%;
+    height:4rem ;
     border-radius: 8px;
-    height:3rem ;
+    justify-content: center;
+    font-size: smaller;
+    color:${props => props.theme["base-text"]};
     background: ${props => props.theme["base-button"]};
+    cursor:pointer
+  }
+  .chose{
+    background: ${props => props.theme["purple-light"]};
+    border:2px solid ${props => props.theme["purple"]};
   }
 }
+  
 `
+
 export const Address = styled(BaseForm)`
   gap: 1rem;
 
