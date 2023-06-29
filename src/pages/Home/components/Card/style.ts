@@ -23,18 +23,28 @@ margin-top: 3rem;
       margin-top: -6rem;
       width: 10rem;
     }
-  
 
   span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     background: ${props => props.theme["yellow-light"]};
-    border-radius: 16px;
-    width: 7rem;
+    border-radius: 8px;
+    height: 1.8rem;
     font-size: 1rem;
-    padding: 0.2rem 0;
+    padding: 0 0.5rem;
     color:${props => props.theme["yellow-dark"]}
   }
   }
+  .types{
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 4rem;
+  }
+  
   
   .coffee{
     display: flex;

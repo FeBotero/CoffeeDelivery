@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-export const ConfirmationContainer = styled.main`
-  display: flex;
-  padding: 2rem 6rem;
-  gap: 2rem;
-  justify-content: center;
-  
-
-`
-export const AddressPayment = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-`
 export const BaseForm = styled.div`
   display: flex;
   background: ${props => props.theme["base-card"]};
@@ -42,59 +29,42 @@ export const BaseForm = styled.div`
   }
 
 `
-export const Payment = styled(BaseForm)`
-  gap: 1rem;
-  h4{
-    display: flex;
-    align-items: center;
-    font-size:x-large;
-    font-weight: 400;
-  }
-.paymentForm{
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
 
-  button{
+
+
+export const ProductContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 25vw;
+  img{
+    width: 5rem;
+  }
+  .buttons{
     display: flex;
     gap: 1rem;
+  }
+  .products{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  p{
+      font-size: larger;
+    }
+
+  .button{
+    display: flex;
     align-items: center;
-    padding: 0.3rem;
-    border: 2px solid transparent;
-    width: 100%;
-    height:4rem ;
+    gap: 0.5rem;
+    border: 0;
+    height: 3rem;
     border-radius: 8px;
-    justify-content: center;
-    font-size: smaller;
-    color:${props => props.theme["base-text"]};
-    background: ${props => props.theme["base-button"]};
-    cursor:pointer
+    padding: 0.5rem;
   }
-  .chose{
-    background: ${props => props.theme["purple-light"]};
-    border:2px solid ${props => props.theme["purple"]};
-  }
-}
-  
 `
-
-export const Address = styled(BaseForm)`
-  gap: 1rem;
-
-  input[name="CEP"]{
-    width: 35%;
-  }
-  input[name="NUMERO"]{
-    width: 55%;
-  }
-  input[name="BAIRRO"]{
-    width: 65%;
-  }
-  input[name="UF"]{
-    width: 15%;
-  }
-
-`
+    
 export const SectionCoffeeContainer=styled(BaseForm)`
 display: flex;
 margin-top: 1rem;
@@ -176,4 +146,11 @@ export const OrderDetailsContainer=styled.div`
     color: ${props=>props.theme["white"]};
     font-weight: 600;
   }
+  
+  
+  .price{
+    font-weight: bold;
+  }
+
+  
 `

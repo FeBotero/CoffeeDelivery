@@ -17,5 +17,6 @@ export const LayoutContainer=styled.div`
   .content{
     margin-top: 3rem;
     flex-grow: 1;
+    
   }
 `
