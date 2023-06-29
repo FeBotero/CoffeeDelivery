@@ -2,6 +2,7 @@ import { useState } from "react";
 import BuyButton from "../../../../assets/BuyButton.svg"
 import { InputNumber } from "../../../../componets/InputNumber"
 import { BuyContainer, CardContainer } from "./style"
+import { formatCash } from "../../../../utils/formatCash";
 
 export interface ICardCoofee {
   img:string;
@@ -13,7 +14,7 @@ export interface ICardCoofee {
 
 export function CardCooffee({ img, nome, description, price, types }: ICardCoofee) {
   const [quantity,setQuantity]=useState(1)
-
+  const priceFormated = formatCash(price)
 
   function handleIncrese(){
     setQuantity(state=>state+1)
@@ -26,7 +27,7 @@ export function CardCooffee({ img, nome, description, price, types }: ICardCoofe
     <CardContainer>
       <div className="showCoffee">
         <img src={img} alt={nome} />
-        <div>
+        <div className="types">
           {
             types.map((type:string) => (
               <span>{type}</span>
@@ -39,7 +40,7 @@ export function CardCooffee({ img, nome, description, price, types }: ICardCoofe
         <p>{description}</p>
       </div>
       <BuyContainer>
-        <div className="priceProduct"><span>R$ </span>{price}</div>
+        <div className="priceProduct"><span>R$ </span>{priceFormated}</div>
         <div className="qtdProduct">
           <InputNumber 
             onIncrase={handleIncrese}
