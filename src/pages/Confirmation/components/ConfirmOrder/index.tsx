@@ -1,9 +1,16 @@
 import { Trash } from "@phosphor-icons/react";
 import { SectionCoffeeContainer, Product, OrderDetailsContainer } from "./style";
+import { useNavigate } from "react-router-dom";
 
 
 
 export function ConfirmOrder(){
+
+  const navigate = useNavigate()
+  function paymentOrder(){
+    navigate("/delivery")
+  }
+
   return(
     <SectionCoffeeContainer>
           <div>
@@ -44,7 +51,7 @@ export function ConfirmOrder(){
               <div>R$ 33,20</div>
             </div>
             <div>
-              <button className="confirmButton">CONFIRMAR PEDIDO</button>
+              <button onClick={paymentOrder} className="confirmButton">CONFIRMAR PEDIDO</button>
             </div>
           </OrderDetailsContainer>
         </SectionCoffeeContainer>

@@ -6,17 +6,25 @@ export const LayoutContainer=styled.div`
   justify-content: space-between;
   min-height: 100vh;
 
-  .header{
+ 
+ 
+`
+
+export const HeaderContent= styled.header`
+ 
     position: fixed;
     background: ${props=>props.theme["white"]};
     top: 0;
     left: 0;
     right: 0;
     
-  }
-  .content{
+  
+
+`
+export const Content=styled.main`
+ 
     margin-top: 3rem;
     flex-grow: 1;
     
-  }
+ 
 `
