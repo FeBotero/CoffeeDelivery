@@ -5,6 +5,7 @@ export const HeaderContainer=styled.header`
   justify-content: space-between;
   margin-inline: 5rem;
   padding: 1rem;
+  
 
 `
 export const BuyUser = styled.div`

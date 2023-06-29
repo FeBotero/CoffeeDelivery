@@ -8,7 +8,7 @@ export const LayoutContainer=styled.div`
 
   .header{
     position: fixed;
-    background: white;
+    background: ${props=>props.theme["white"]};
     top: 0;
     left: 0;
     right: 0;

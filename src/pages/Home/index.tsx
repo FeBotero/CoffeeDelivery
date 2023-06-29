@@ -4,10 +4,8 @@ import IconBox from "../../assets/IconBox.svg"
 import IconCar from "../../assets/IconCar.svg"
 import IconCoffee from "../../assets/IconCoffee.svg"
 import IconTime from "../../assets/IconTime.svg"
-import { CardCooffee } from "../../componets/Card/CardCoffee";
+import { CardCooffee } from "./components/Card/CardCoffee";
 import { Cafes } from "../../utils/utils";
-
-
 
 
 
@@ -40,7 +38,7 @@ export function Home() {
 
           {
             Cafes.map(cafe => (
-              <CardCooffee img={cafe.img} nome={cafe.nome} description={cafe.descricao} price={cafe.valor} tipos={cafe.tipos}/>
+              <CardCooffee img={cafe.img} nome={cafe.nome} description={cafe.descricao} price={cafe.valor} types={cafe.tipos}/>
             ))
           }
 

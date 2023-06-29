@@ -1,33 +1,27 @@
-import { useState } from "react";
+
 import { InputContainer } from "./style";
 
 import { Minus, Plus } from "@phosphor-icons/react";
 
-export function InputNumber() {
-  const [count, setCount] = useState(1)
+interface QTDProps{
+  onIncrase:()=>void;
+  onDecrase:()=>void;
+  quantity:number;
+}
 
-  function increment() {
-    setCount(count + 1)
-  }
-
-  function decrement() {
-    if(count>1){
-      setCount(count - 1)
-    }else{
-      ""
-    }
-  }
+export function InputNumber({onIncrase,onDecrase,quantity}:QTDProps)  {
+  
   return (
     <InputContainer>
-      <div className="sets" onClick={decrement}>
-          <Minus size={24} />
-      </div>
+      <button className="sets" disabled={quantity<=1} onClick={onDecrase}>
+          <Minus size={14} />
+      </button>
       <div>
-        {count}
+        <input type="number" value={quantity}  />
       </div>
-      <div className="sets" onClick={increment}>
-        <Plus size={24} />
-      </div>
+      <button className="sets" disabled={quantity>=20}  onClick={onIncrase}>
+        <Plus size={14}  />
+      </button>
 
 
     </InputContainer>

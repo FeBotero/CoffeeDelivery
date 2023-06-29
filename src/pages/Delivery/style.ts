@@ -4,6 +4,7 @@ export const DeliveryContainer = styled.main`
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 5rem;
 `
 export const TypeContent= styled.div`
   display: flex;
